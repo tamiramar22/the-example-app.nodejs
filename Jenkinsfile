@@ -13,9 +13,6 @@ pipeline {
 			  sh "npm run test"  
 			}
 		}
-		stage('Deploy'){
-		
-		}
 	}
 
 }
