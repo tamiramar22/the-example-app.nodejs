@@ -14,7 +14,7 @@
     "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:e2e": "node test/run-e2e-test.js",
     "test:e2e:dev": "node test/run-e2e-test.js --dev",
-    "test:integration": "jest test/integration",
+    "test:integration": "jest --env=node test/integration",
     "test:integration:watch": "jest test/integration --watch",
     "test:unit": "jest --env=node test/unit",
     "test:unit:watch": "jest test/unit --watch"
