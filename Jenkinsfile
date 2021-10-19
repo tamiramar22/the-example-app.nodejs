@@ -4,7 +4,7 @@ pipeline {
 		stage('Build') {
 			steps{
 			  script {
-			    dockerImage = docker.build "tamiramar/zertoImage"
+			    dockerImage = docker.build "tamiramar/zertoimage"
 			  }				
 			}
 		}
