@@ -4,13 +4,13 @@ pipeline {
 		stage('Build') {
 			steps{
 			  script {
-			    dockerImage = docker.build "tamiramar/zertoimage"
+			    dockerimage = docker.build "tamiramar/zertoimage"
 			  }				
 			}
 		}
 		stage('Test'){
 			steps{
-			  sh "docker run --rm dockerImage npm test"  
+			  sh "docker run --rm dockerimage npm test"  
 			}
 		}
 	}
