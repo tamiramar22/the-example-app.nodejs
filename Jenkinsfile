@@ -7,6 +7,7 @@ pipeline {
 			    dockerImage = docker.build "tamiramar/zertoImage"
 			  }				
 			}
+		}
 		stage('Test'){
 			steps{
 			  script {
