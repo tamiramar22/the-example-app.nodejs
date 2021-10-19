@@ -10,7 +10,8 @@ pipeline {
 		}
 		stage('Test'){
 			steps{
-			  sh "docker run --rm dockerimage npm test"  
+			  script 
+			  sh "docker run --rm tamiramar/zertoimage npm test"  
 			}
 		}
 	}
