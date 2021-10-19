@@ -1,18 +1,12 @@
 pipeline {
-	agent any
+	agent {
+		docker { image 'node:9'}
 	stages {
-		stage('Build') {
-			steps{
-			  script {
-			    dockerimage = docker.build "tamiramar/zertoimage"
-			  }				
-			}
-		}
 		stage('Test'){
 			steps{
 			  sh "npm run test"  
 			}
 		}
 	}
-
+	}
 }
