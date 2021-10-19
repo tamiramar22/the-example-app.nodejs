@@ -10,7 +10,7 @@ pipeline {
 		stage('Test'){
 			steps{
 			  script {
-			    docker run --rm -p 3000:3000 npm test 
+			    docker run --rm -p 3000:3000 dockerImage npm test 
 			  }
 			}
 		}
