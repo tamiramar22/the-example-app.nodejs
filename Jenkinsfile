@@ -3,13 +3,15 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps{
-			docker build with plugin jenkins include name
+			  script {
+			    dockerImage = docker.build "tamiramar/zertoImage"
+			  }				
 			}
-
-		}
 		stage('Test'){
 			steps{
-			docker run -it --name npm test including ports -p 3000 
+			  script {
+			    docker run --rm -p 3000:3000 npm test 
+			  }
 			}
 		}
 		stage('Deploy'){
